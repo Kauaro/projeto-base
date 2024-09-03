@@ -1,13 +1,277 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>SLA 2024 | Inicio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/slideshow.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   </head>
+
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- container da pagina  -->
+    <div class="container">
+      <!-- header  -->
+      <header>
+        <!-- parte de cima do header -->
+        <div class="header-main">
+          <div class="logo_evento">
+            <a href="/">
+             <img src="img/logo.png" id="logo">
+            </a>
+          </div>
+          <div class="logo_if">
+            <a href="#" target="_blank">
+              <img
+                src="img/administrador.png"
+                alt="LOGIN - CADASTRO"
+              />
+            </a>
+          </div>
+
+          <!-- parte de baixo do header  -->
+        </div>
+
+        <!-- nav  -->
+        <nav class="header-botton">
+          <!-- botão inicio  -->
+          <div class="inter-hb">
+            <a href="#" class="link-hb">
+              <button class="button-hb on-page-menu-color">
+                <span class="span-hb">Inicio</span>
+              </button>
+            </a>
+          </div>
+
+          <!-- botão sobre  -->
+          <div class="inter-hb">
+            <a href="sobre.html" class="link-hb">
+              <button class="button-hb">
+                <span class="span-hb">Sobre Nós</span>
+              </button>
+            </a>
+          </div>
+
+          <!-- botão dissertações  -->
+          <div class="inter-hb">
+            <button class="button-hb dropdown">
+              <span class="span-hb">Temas</span>
+
+              <!-- dropdown  -->
+              <ul class="dropdown_menu dropdown_menu-1">
+                <!-- itens do dropdown  -->
+                <li class="dropdown_item-1 dd-input">
+                  <a href="sobre.html">LGBTQIA+Fobia</a>
+                </li>
+                <li class="dropdown_item-2 dd-input">
+                  <a href="redacoes/2AII/2AII.html">intolerancia Racial</a>
+                </li>
+                <!-- <li class="dropdown_item-2 dd-input">
+                  <a href="redacoes/2BII/#">2BII</a>
+                </li> -->
+                <li class="dropdown_item-3 dd-input">
+                  <a href="sobre.html">Misoginia / Machismo</a>
+                </li>
+                <li class="dropdown_item-4 dd-input">
+                  <a href="sobre.html">Autismo</a>
+                </li>
+                <li class="dropdown_item-5 dd-input">
+                  <a href="sobre.html">Fake News</a>
+                </li>
+                <li class="dropdown_item-6 dd-input">
+                  <a href="sobre.html">Narcóticos</a>
+                </li>
+                <li class="dropdown_item-7 dd-input">
+                  <a href="sobre.html">Desigualdade Social</a>
+                </li>
+                <li class="dropdown_item-8 dd-input">
+                  <a href="sobre.html">Arte</a>
+                </li>
+              </ul>
+            </button>
+          </div>
+
+          <!-- botao if baiano  -->
+          <div class="inter-hb">
+            <a href="ifbaiano.html" class="link-hb">
+              <button class="button-hb">
+                <span class="span-hb">FIEB</span>
+              </button>
+            </a>
+          </div>
+
+          <!-- botao docentes  -->
+          <div class="inter-hb">
+            <a href="docentes.html" class="link-hb">
+              <button class="button-hb">
+                <span class="span-hb">Ajuda</span>
+              </button>
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      <section>
+        <!-- centraliza o conteúdo  -->
+        <div class="center-cont">
+          <!-- carrossel de imagens  -->
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img
+                src="img/racismo.jpg"
+                style="width: 100%"
+                alt="'Discriminação racial"
+              />
+              <div class="text"><span>Diga NAO a intolerancia racial!</span></div>
+            </div>
+
+            <div class="mySlides fade">
+              <a
+                href="#"
+                target="_blank"
+                rel="external"
+                ><img src="img/machismo.jpg" style="width: 100%"
+              /></a>
+              <div class="text">Direitos Iguais a todos os gêneros!!</div>
+            </div>
+
+            <div class="mySlides fade">
+              <a
+                href="#"
+                target="_blank"
+                rel="external"
+              >
+                <img
+                  src="img/autismo.jpg"
+                  style="width: 100%"
+                ></video>
+              </a>
+              <div class="text">Autismo NAO é doença.</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
+          <div class="galery">
+            <span>Veja todas as fotos do evento</span>
+            <br />
+            <a href="galeria.html" target="_self" class="link-galeria">
+              <?xml version="1.0" ?>
+              <svg
+                class="gallery-icon"
+                height="64"
+                id="svg4063"
+                version="1.1"
+                viewBox="0 0 32 32.000001"
+                width="64"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:cc="http://creativecommons.org/ns#"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns:svg="http://www.w3.org/2000/svg"
+              >
+                <defs id="defs4065" />
+                <g id="layer1" transform="translate(0,-1020.3621)">
+                  <g id="g7615">
+                    <path
+                      d="m 15.99992,1023.3619 6.00004,6.5002 -6.00004,6.5 z"
+                      id="path5172"
+                    />
+                    <path
+                      d="m 15.99989,1036.362 6.0001,-6.5 0,6.5001 z"
+                      id="path5174"
+                    />
+                    <path
+                      d="m 29.00021,1036.3621 -6.5002,6 -6.5,-6 z"
+                      id="path5176"
+                    />
+                    <path
+                      d="m 16.00011,1036.3621 6.5,6.0001 -6.5001,0 z"
+                      id="path5178"
+                    />
+                    <path
+                      d="m 15.99999,1049.3623 -6.00004,-6.5002 6.00004,-6.5 z"
+                      id="path5180"
+                    />
+                    <path
+                      d="m 16.00002,1036.3622 -6.0001,6.5 0,-6.5001 z"
+                      id="path5182"
+                    />
+                    <path
+                      d="m 2.99979,1036.3621 6.5002,-6 6.5,6 z"
+                      id="path5184"
+                    />
+                    <path
+                      d="m 15.99989,1036.3621 -6.5,-6.0001 6.5001,0 z"
+                      id="path5186"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </p>
+
+          <!-- linha de separação  -->
+          <hr class="separador" />
+
+          <!-- conteúdo da pagina  -->
+          <div class="conteudo-main">
+            <!-- melhores redações  -->
+            <h2>Melhores redações</h2>
+            <div class="melhores-top">
+              <a href="/redacoes/2AII/2AII.html#digital">
+                <img
+                  src="img/alienacao-digital.png"
+                  alt="Alienação digital - 2AII"
+                  width="410px"
+                  class="zoom"
+                />
+              </a>
+              <a href="/redacoes/2AII/2AII.html#vozes">
+                <img
+                  src="img/vozes-silenciadas.png"
+                  alt="Alienação digital - 2AII"
+                  width="410px"
+                  class="zoom"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer  -->
+    <footer>
+      <a href="https://www.instagram.com/fieb_oficial/">
+      <img src="img/insta.png" alt="" class="insta">
+      </a>
+      <a href="https://fieb.edu.br/">
+        <img src="img/fieb.png" alt="" class="fieb">
+        </a>
+      <h3>ITB Brasílio Flores de Azevedo</h3>
+      <p>Avenida Grupo Bandeirantes, 138 - Jardim Belval</p>
+      <p>Barueri/SP - CEP 06420-150</p>
+      <p>2ª a 6ª - das 8h às 18h.</p>
+      <p>Telefone (11) 4199-4220 </p>
+      <p>contato@fieb.edu.br</p>
+      <div class="barra-inferior"></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
