@@ -1,7 +1,7 @@
 /* define variaveis com cores padroes do site  */
 :root {
   --main-color: #D9BCF6;
-  --second-color: #EFDEFF;
+  --second-color: rgb(150, 124, 175);
   --contrast-color: #481778;
 }
 
@@ -19,7 +19,7 @@
 html {
   overflow: scroll;
   overflow-x: hidden;
-  background-color: #EFDEFF;
+  background-color: #D9BCF6;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -350,9 +350,10 @@ section {
 footer {
   height: 1fr;
   background-color: var(--main-color);
-  color: #fff;
+  color: #000;
   text-align: center;
   bottom: 0;
+  background-color: rgb(150, 124, 175)  ;
 }
 
 footer img {

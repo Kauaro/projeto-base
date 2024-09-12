@@ -44,3 +44,24 @@ if(document.documentElement.clientWidth <= 992){
   imgs.map(item => item.classList.remove("zoom")) 
 } 
 
+document.getElementById('projectForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita o envio do formulário e o recarregamento da página
+
+  // Obtém os valores dos campos do formulário
+  const title = document.getElementById('title').value;
+  const description = document.getElementById('description').value;
+  const theme = document.getElementById('theme').value;
+  const participants = document.getElementById('participants').value;
+  const schedule = document.getElementById('schedule').value;
+
+  // Exibe os dados do projeto na página
+  const output = document.getElementById('output');
+  output.innerHTML = `
+      <h2>Dados do Projeto Cadastrado:</h2>
+      <p><strong>Título:</strong> ${title}</p>
+      <p><strong>Descrição:</strong> ${description}</p>
+      <p><strong>Tema:</strong> ${theme}</p>
+      <p><strong>Participantes:</strong> ${participants}</p>
+      <p><strong>Horário de Apresentação:</strong> ${schedule}</p>
+  `;
+});
