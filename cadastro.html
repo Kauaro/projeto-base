@@ -6,11 +6,11 @@
     <!-- Definição da viewport para responsividade em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Título da página -->
-    <title>SLA 2024 | FIEB</title>
+    <title>SLA 2024 | Sobre</title>
     <!-- Links para folhas de estilo CSS -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/ifbaiano.css" />
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/cadastro.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
@@ -21,7 +21,7 @@
         <!-- parte de cima do header -->
         <div class="header-main">
           <div class="logo_evento">
-            <a href="/">
+            <a href="index.html">
              <img src="img/logo.png" id="logo">
             </a>
           </div>
@@ -115,67 +115,95 @@
           </div>
         </nav>
       </header>
+      <main>
+        <div class="container" >
+            <a class="links" id="paracadastro"></a>
+            <a class="links" id="paralogin"></a>
+            
+            <div class="content">      
+              <!--FORMULÁRIO DE LOGIN-->
+              <div id="login">
+                <form method="post" action=""> 
+                  <h1>Login</h1> 
+                  <p> 
+                    <label for="email_login">Seu e-mail</label>
+                    <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@htmlecsspro.com"/>
+                  </p>
+                  
+                  <p> 
+                    <label for="senha_login">Sua senha</label>
+                    <input id="senha_login" name="senha_login" required="required" type="password" placeholder="1234" /> 
+                  </p>
+                  
+                  <p> 
+                    <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+                    <label for="manterlogado">Manter-me logado</label>
+                  </p>
+                  
+                  <p> 
+                    <input type="submit" value="Logar" /> 
+                  </p>
+                  
+                  <p class="link">
+                    Ainda não tem conta?
+                    <a href="#paracadastro">Cadastre-se</a>
+                  </p>
+                </form>
+              </div>
+        
+              <!--FORMULÁRIO DE CADASTRO-->
+              <div id="cadastro">
+                <form method="post" action=""> 
+                  <h1>Cadastro</h1> 
+                  
+                  <p> 
+                    <label for="nome_cad">Seu nome</label>
+                    <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Luiz Augusto" />
+                  </p>
+                  
+                  <p> 
+                    <label for="email_cad">Seu e-mail</label>
+                    <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com"/> 
+                  </p>
+                  
+                  <p> 
+                    <label for="senha_cad">Sua senha</label>
+                    <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="1234"/>
+                  </p>
+                  
+                  <p> 
+                    <input type="submit" value="Cadastrar"/> 
+                  </p>
+                  
+                  <p class="link">  
+                    Já tem conta?
+                    <a href="#paralogin"> Ir para Login </a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div> 
+      </main>
 
-      <!-- Seção principal -->
-      <section>
-        <!-- Container centralizado -->
-        <div class="center-cont">
-          <!-- Título da seção -->
-          <div class="titulo">
-            <h1 class="ifbaiano">O IF Baiano</h1>
-          </div>
-          <hr />
-          <!-- Conteúdo -->
-          <div class="cont">
-            <!-- Parágrafos com informações sobre o IF Baiano -->
-            <p class="para-if">
-              O Instituto Federal de Educação, Ciência e Tecnologia Baiano (IF
-              Baiano) foi criado em 2008 e é uma instituição de Ensino Médio e
-              Superior, focado na Educação Profissional e Tecnológica. Sua
-              proposta é levar alternativas às demandas da comunidade, através
-              de ensino, pesquisa e extensão, articulando-se com o mundo do
-              trabalho.
-            </p>
+      <footer>
+        <p>
+          Instituto Federal de Educação, Ciência e Tecnologia Baiano – Campus
+          Guanambi Zona Rural - Distrito de Ceraíma, Bahia - CEP: 46430-000
+        </p>
+        <p>Tel.: (77) 3493-2100</p>
+        <p>Diretor: Carlito José de Barros Filho</p>
+        <p>E-mail: gabinete@guanambi.ifbaiano.edu.br</p>
+        <!-- Barra inferior -->
+        <div class="barra-inferior"></div>
+      </footer>
 
-            <p class="para-if">
-              Assim, egressos do Ensino Fundamental, Médio ou Superior têm a
-              possibilidade de estudar no Instituto através de cursos técnicos –
-              Integrados, Subsequentes (presenciais e EaD), Proeja – de
-              graduação e pós-graduação ou ainda fazer cursos de capacitação
-              ofertados, através de Programas de Extensão.
-            </p>
-
-            <!-- Imagem -->
-            <img
-              loading="lazy"
-              src="img/ifgbi.jpg"
-              alt="Fotografia do If Campus Guanambi"
-              id="ifbaiano"
-            />
-          </div>
-        </div>
-      </section>
+      <!-- Script JavaScript -->
+      <script src="js/script.js"></script>
+      <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+      </script>
+      <script defer src="/_vercel/insights/script.js"></script>
     </div>
-
-    <!-- Rodapé -->
-    <footer>
-      <!-- Informações de contato -->
-      <p>
-        Instituto Federal de Educação, Ciência e Tecnologia Baiano – Campus
-        Guanambi Zona Rural - Distrito de Ceraíma, Bahia - CEP: 46430-000
-      </p>
-      <p>Tel.: (77) 3493-2100</p>
-      <p>Diretor: Carlito José de Barros Filho</p>
-      <p>E-mail: gabinete@guanambi.ifbaiano.edu.br</p>
-      <!-- Barra inferior -->
-      <div class="barra-inferior"></div>
-    </footer>
-
-    <!-- Script JavaScript -->
-    <script src="js/script.js"></script>
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- fechando a tag container -->
   </body>
 </html>
