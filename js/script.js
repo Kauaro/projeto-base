@@ -65,3 +65,68 @@ document.getElementById('projectForm').addEventListener('submit', function(event
       <p><strong>Horário de Apresentação:</strong> ${schedule}</p>
   `;
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  projectCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'scale(1.05)';
+      card.style.boxShadow = '0 8px 12px rgba(0, 0, 0, 0.2)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'scale(1)';
+      card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const contacts = document.querySelectorAll('.contact');
+  const chatHeader = document.querySelector('.chat-header');
+  const messages = document.querySelector('.messages');
+  const inputArea = document.querySelector('.input-area input');
+  const sendButton = document.querySelector('.input-area button');
+
+  contacts.forEach(contact => {
+    contact.addEventListener('click', function() {
+      const name = this.querySelector('span').textContent;
+      chatHeader.textContent = `Chat com ${name}`;
+      messages.innerHTML = ''; // Clear previous messages
+    });
+  });
+
+  sendButton.addEventListener('click', sendMessage);
+  inputArea.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
+  });
+
+  function sendMessage() {
+    const messageText = inputArea.value.trim();
+    if (messageText) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', 'sent');
+      messageElement.textContent = messageText;
+      messages.appendChild(messageElement);
+      inputArea.value = '';
+      messages.scrollTop = messages.scrollHeight;
+    }
+  }
+
+  // Search functionality
+  const searchInput = document.querySelector('.search-bar input');
+  searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    contacts.forEach(contact => {
+      const name = contact.querySelector('span').textContent.toLowerCase();
+      if (name.includes(searchTerm)) {
+        contact.style.display = 'flex';
+      } else {
+        contact.style.display = 'none';
+      }
+    });
+  });
+});
