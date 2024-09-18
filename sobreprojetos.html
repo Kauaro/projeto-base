@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Projetos | SLA</title>
+    <link rel="stylesheet" href="css/sobreprojetos.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">
+          <img src="img/logo.png" alt="">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="www.fieb.org.br">FIEB</a></li>
+        </ul>
+        <a href="login.html">
+            <button class="login-icon" aria-label="Login" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+              </svg>
+            </button>
+          </a>
+      </nav>
+    <div class="container-sp">
+        <h1>Raízes da Igualdade</h1>
+        
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item"><img src="img/racismosp.jfif" alt="RACISMO NAO"></div>
+                <div class="carousel-item"><img src="img/mao preta2.jpg" alt="RACISMO NAO"></div>
+                <div class="carousel-item"><img src="img/racismo1.jpg" alt="RACISMO NAO"></div>
+            </div>
+            <a href="#" class="carousel-control prev">&lt;</a>
+            <a href="#" class="carousel-control next">&gt;</a>
+        </div>
+
+        <div class="description">
+            <h2>Sobre o Projeto</h2>
+            <p>Raízes da Igualdade: Desconstruindo o Racismo</h2>
+                <p class="project-description"> O projeto "Raízes da Igualdade" tem como objetivo educar e conscientizar sobre as origens e impactos do racismo na sociedade. Através de workshops interativos, palestras com especialistas e materiais educativos, buscamos promover um diálogo aberto e reflexões críticas. Com a participação de ativistas e líderes comunitários, o projeto visa desconstruir estereótipos e incentivar ações em prol de uma sociedade mais justa e equitativa, onde todos desfrutem dos mesmos direitos e oportunidades. Junte-se a nós nessa jornada de aprendizado e transformação!</p>
+             <h4>SALA 00</h4>
+
+            </div>
+
+        <div class="reviews">
+            <h2>Avaliações dos Usuários</h2>
+            <div class="review">
+                <div class="stars">★★★★★</div>
+
+                <p><strong>Ana S.</strong> - "Incrível! Mudou completamente minha rotina para melhor."</p>
+            </div>
+            <div class="review">
+                <div class="stars">★★★★☆</div>
+                <p><strong>Carlos M.</strong> - "Muito bom, mas ainda há espaço para melhorias na interface."</p>
+            </div>
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p><strong>Luciana R.</strong> - "Simplesmente fantástico! Recomendo a todos."</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="https://www.instagram.com/fieb_oficial/">
+        <img src="img/insta.png" alt="" class="insta">
+        </a>
+        <a href="https://fieb.edu.br/">
+          <img src="img/fieb.png" alt="" class="fieb">
+          </a>
+        <h3>ITB Brasílio Flores de Azevedo</h3>
+        <p>Avenida Grupo Bandeirantes, 138 - Jardim Belval</p>
+        <p>Barueri/SP - CEP 06420-150</p>
+        <p>2ª a 6ª - das 8h às 18h.</p>
+        <p>Telefone (11) 4199-4220 </p>
+        <p>contato@fieb.edu.br</p>
+        <div class="barra-inferior"></div>
+      </footer>
+  
+    <script>
+        const carousel = document.querySelector('.carousel-inner');
+        const items = carousel.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function showItem(index) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        document.querySelector('.next').addEventListener('click', (e) => {
+            e.preventDefault();
+            currentIndex = (currentIndex + 1) % items.length;
+            showItem(currentIndex);
+        });
+
+        document.querySelector('.prev').addEventListener('click', (e) => {
+            e.preventDefault();
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            showItem(currentIndex);
+        });
+    </script>
+</body>
+</html>

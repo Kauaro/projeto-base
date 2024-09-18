@@ -158,7 +158,7 @@ input[type="submit"]:hover{
   height: 500px;
   padding: 18px 6% 60px 6%;
   margin: 0 0 35px 0;
-  background: rgb(145, 108, 182);
+  background: var(--main-color);
   
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   

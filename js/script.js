@@ -116,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Search functionality
   const searchInput = document.querySelector('.search-bar input');
   searchInput.addEventListener('input', function() {
     const searchTerm = this.value.toLowerCase();
@@ -129,4 +128,10 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+});
+
+
+
+document.querySelector('.login-icon').addEventListener('click', () => {
+  alert('Funcionalidade de login em desenvolvimento!');
 });

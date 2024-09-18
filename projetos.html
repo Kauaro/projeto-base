@@ -16,60 +16,24 @@
     <div class="container">
         <!-- header  -->
         <header>
-          <!-- parte de cima do header -->
-          <div class="header-main">
-            <div class="logo_evento">
-              <a href="index.html">
-               <img src="img/logo.png" id="logo">
-              </a>
-            </div>
-            <div class="logo_if">
-              <a href="cadastro.html" target="_blank">
-                <img
-                  src="img/administrador.png"
-                  alt="LOGIN - CADASTRO"
-                />
-              </a>
-            </div>
-  
-            <!-- parte de baixo do header  -->
-          </div>
-  
-          <nav class="header-botton">
-            <!-- botão inicio  -->
-            <div class="inter-hb">
-              <a href="index.html" class="link-hb">
-                <button class="button-hb on-page-menu-color">
-                  <span class="span-hb">Inicio</span>
-                </button>
-              </a>
-            </div>
-  
-            <!-- botão sobre  -->
-            <div class="inter-hb">
-              <a href="sobre.html" class="link-hb">
-                <button class="button-hb">
-                  <span class="span-hb">Sobre Nós</span>
-                </button>
-              </a>
-            </div>
-  
-            <!-- botão dissertações  -->
-            <div class="inter-hb">
-              <button class="button-hb dropdown">
-                <span class="span-hb">Projetos</span>
-              </button>
-            </div>
-  
-            <!-- botao if baiano  -->
-            <div class="inter-hb">
-              <a href="https://fieb.edu.br/" class="link-hb">
-                <button class="button-hb">
-                  <span class="span-hb">FIEB</span>
-                </button>
-              </a>
-            </div>
-          </nav>
+          <nav class="navbar">
+          <a href="/" class="logo">
+            <img src="img/logo.png" alt="">
+          </a>
+          <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="www.fieb.org.br">FIEB</a></li>
+          </ul>
+          <a href="login.html">
+          <button class="login-icon" aria-label="Login" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+            </svg>
+          </button>
+        </a>
+        </nav>
         </header>
     <div class="container-p">
       <h1>Projetos</h1>
@@ -83,6 +47,7 @@
           </div>
         </div>
         
+        <a href="sobreprojetos.html">
         <div class="project-card">
           <img src="img/racismo2.jpg" class="project-image" width="300" height="200">
           <div class="project-info">
@@ -91,6 +56,7 @@
             <div class="star-rating">★★★★☆</div>
           </div>
         </div>
+      </a>
         
         <div class="project-card">
           <img src="img/homo2.jpg" class="project-image" width="300" height="200">
