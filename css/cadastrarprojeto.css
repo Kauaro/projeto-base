@@ -10,7 +10,7 @@ body {
 }
 
 .container-cp {
-    background-color: #916cb6;
+    background-color: var(--main-color);
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -24,14 +24,16 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 2em;
     color: #ffffff;
 }
+
 
 label {
 
     margin-bottom: 8px;
     font-weight: bold;
-    color: #d3d3d3;
+    color: #636363;
 }
 
 input, textarea, select {
@@ -47,6 +49,7 @@ input, textarea, select {
 textarea {
     resize: vertical;
 }
+
 
 button {
     background-color: #3f225c;

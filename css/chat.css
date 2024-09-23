@@ -11,10 +11,10 @@ body, html {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 1300px;
+    max-width: 1000px;
     width: 100%;
     position: relative;
-    left: 220px;
+    left: 420px;
     top: 100px;
   }
   .sidebar {
@@ -58,11 +58,11 @@ body, html {
   .chat-area {
     flex-grow: 1;
     display: flex;
-    width: 1050px;
+    width: 750px;
     flex-direction: column;
     position: absolute;
     left: 330px;
-    top: 50px;
+    top: 20px;
   }
   .chat-header {
     background-color: #481778;
@@ -73,6 +73,7 @@ body, html {
     border-bottom: #D9BCF6;
     border-left: #D9BCF6;
     border-style:solid;
+    max-width: 100%;
   }
   .messages {
     flex-grow: 1;
@@ -80,12 +81,20 @@ body, html {
     padding: 10px;
   }
   .message {
-    max-width: 70%;
+    max-width: 50%;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 10px;
     
 
+  }
+
+  #msg-icon{
+    width: 30px;
+    display: inline;
+    position: relative;
+    left: 700px;
+    bottom: 40px;
   }
   .message.received {
     background-color: #e0e0e0;
@@ -96,7 +105,9 @@ body, html {
     color: white;
     align-self: flex-end;
     position: relative;
-    left: 280px;
+    left: 450px;
+    width: 220px;
+    text-align: right ;
 
   }
   .input-area {

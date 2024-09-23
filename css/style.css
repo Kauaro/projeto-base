@@ -20,6 +20,8 @@ html {
   overflow: scroll;
   overflow-x: hidden;
   background-color: #fff;
+
+
 }
 
 ::-webkit-scrollbar-thumb {
@@ -67,10 +69,21 @@ html {
 .nav-links li {
   margin-left: 5rem;
 }
+
+#nav-sec{
+  color: #fff;
+  border-style: solid;
+  background-color: #481778 ;
+  border-color: #481778;
+  border-radius: 10px;
+  padding: 35px;
+}
+
+
 .nav-links a {
 
   text-decoration: none;
-  color: #333;
+
   font-weight: 500;
   transition: color 0.3s ease;
 
@@ -79,8 +92,9 @@ html {
   color: #ffffff;
   border-style: solid;
   background-color: #481778 ;
+  border-color: #481778;
   border-radius: 10px;
-  padding: 10px;
+  padding: 35px;
 }
 .login-icon {
   background: none;
@@ -352,6 +366,18 @@ section {
   gap: 12px;
 }
 
+#orgulho{
+  width: 100px;
+  position: relative;
+  right: 500px;
+  bottom: 100px;
+}
+
+.conteudo-main p {
+  font-size: 120%;
+  text-align: justify;
+}
+
 .conteudo-main h2 {
   font-size: 28px;
   padding-bottom: 8px;
@@ -405,6 +431,10 @@ footer img {
     position: relative;
     top: 350px;
     
+}
+
+.exit-login {
+  background: none;
 }
 
 footer p, h3 {

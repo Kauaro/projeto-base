@@ -130,8 +130,12 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-
-document.querySelector('.login-icon').addEventListener('click', () => {
-  alert('Funcionalidade de login em desenvolvimento!');
-});
+function cadastro() {
+  var n1 = document.getElementById("txtPratPrin").value;
+  if (n1=="") {
+        window.alert("PREENCHA OS CAMPOS");                
+  }
+  else {
+      window.alert("preenchimento OK");
+  }
+  }

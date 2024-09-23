@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <!-- Definição da viewport para responsividade em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SLA 2024 | CADASTRAR PROJETO</title>
+    <title>SLA 2024 | LOGIN</title>
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -23,14 +23,14 @@
         <!-- Cabeçalho -->
         <header>
           <nav class="navbar">
-          <a href="/" class="logo">
+            <a href="index.html"></a>
             <img src="img/logo.png" alt="">
           </a>
           <ul class="nav-links">
             <li><a href="index.html">Início</a></li>
               <li><a href="sobre.html">Sobre nós</a></li>
               <li><a href="projetos.html">Projetos</a></li>
-              <li><a href="www.fieb.org.br">FIEB</a></li>
+              <li><a href="https://fieb.edu.br/">FIEB</a></li>
           </ul>
           <a href="login.html">
             <button class="login-icon" aria-label="Login" >
@@ -56,7 +56,13 @@
                 <input type="checkbox" id="lembrar" name="lembrar">
                 <label for="lembrar">Lembrar senha</label>
             </div>
-            <button type="submit">Entrar</button>
+      
+              
+            <button type="submit" id="submit">
+              <a href="indexadm.html">
+              Entrar
+              </a>
+            </button>
         </form>
     </div>
 
@@ -80,7 +86,7 @@
 
             if (isValid) {
                 alert('Formulário válido! Enviando dados...');
-                // Aqui você pode adicionar a lógica para enviar os dados para o servidor
+               
             }
         });
     </script>

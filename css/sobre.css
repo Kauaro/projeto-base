@@ -5,7 +5,7 @@
 /* Estilo da caixa principal */
 main .box {
   max-width: 852px;
-  height: 700px;
+  height: 1000px;
   position: relative;
   top: 100px;
   margin: 24px auto;

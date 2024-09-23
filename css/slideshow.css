@@ -5,6 +5,8 @@
   margin: auto; /* centraliza o container na página */
 }
 
+
+
 /* Botões próximo e anterior */
 .prev, .next {
   cursor: pointer; /* cursor do mouse apontando */
