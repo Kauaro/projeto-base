@@ -24,6 +24,12 @@ html {
 
 }
 
+#logosla {
+  width: 100px;
+
+
+}
+
 ::-webkit-scrollbar-thumb {
   width: 20px;
 }
@@ -102,8 +108,7 @@ html {
   cursor: pointer;
 }
 .login-icon svg {
-  width: 24px;
-  height: 24px;
+
   fill: #333;
   transition: fill 0.3s ease;
 }
