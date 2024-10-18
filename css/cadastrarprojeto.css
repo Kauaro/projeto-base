@@ -1,12 +1,7 @@
-/* Reset básico para garantir uma aparência consistente */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 500px;
+#logoslacp{
+    width: 100px;
+    position: relative;
+    left: 300px;
 }
 
 .container-cp {
