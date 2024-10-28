@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/slideshow.css';
 import './css/style.css'; // Import your stylesheet
 import logo from './img/logo.png';
 import racismo from './img/racismo.jpg';
@@ -7,26 +8,27 @@ import autismo from './img/autismo.jpg';
 import orgulho from './img/orgulho.png';
 import insta from './img/insta.png';
 import fieb from './img/fieb.png';
+import { Link } from 'react-router-dom';
 
 const App = () => {
   return (
     <div className="container">
       <header>
         <nav className="navbar">
-          <a href="index.html">
+          <Link to="index.html">
             <img src={logo} alt="Logo" id="logosla" />
-          </a>
+          </Link>
           <ul className="nav-links">
           <li><Link to="/" id="nav-sec">Início</Link></li>
   <li><Link to="/sobre">Sobre nós</Link></li>
   <li><Link to="/projetos">Projetos</Link></li>
   <li><a href="https://fieb.edu.br/">FIEB</a></li>
           </ul>
-          <a href="login.jsx">
+          <Link to="login.jsx">
             <button className="login-icon" aria-label="Login">
               {/* SVG code here */}
             </button>
-          </a>
+          </Link>
         </nav>
       </header>
 
