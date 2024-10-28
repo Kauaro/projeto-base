@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Definição do conjunto de caracteres como UTF-8 -->
+    <meta charset="UTF-8" />
+    <!-- Definição da viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título da página -->
+    <title>SLA 2024 | CADASTRAR PROJETO</title>
+    <!-- Links para folhas de estilo CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cadastrarprojeto.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+      html{
+background-image: url("img/fundo3.png");
+}
+    </style>
+  </head>
+
+  <body>
+    <!-- Contêiner principal -->
+    <div class="container">
+      <!-- Cabeçalho -->
+      <header>
+        <nav class="navbar">
+          <a href="index.html" id="logosla">
+            <img src="img/logo.png" alt="" id="logoslacp">
+          </a>
+          <ul class="nav-links">
+            <li><a href="indexadm.html" >Início</a></li>
+            <li><a href="cadastrarprojeto.html" id="nav-sec">Cadastrar Projetos</a></li>
+            <li><a href="projetosadm.html">Projetos</a></li>
+            <li><a href="Chat.html">Chat</a></li>
+          </ul>
+          <a href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+                <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+              </svg>
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="container-cp">
+          <h1>Cadastro de Projetos</h1>
+          <form id="projectForm">
+              <label for="title">Título:</label>
+              <input type="text" id="title" name="title" required>
+  
+              <label for="description">Descrição:</label>
+              <textarea id="description" name="description" rows="4" required></textarea>
+  
+              <label for="theme">Tema:</label>
+              <input type="text" id="theme" name="theme" required>
+  
+              <label for="participants">Aluno Responsavel:</label>
+              <input type="text" id="aluno-respon" name="aluno-respon" required>
+
+              <label for="selecao">Possui professor representante?</label>
+        <select id="selecao" onchange="atualizarInput()">
+            <option value="nao">Não</option>
+            <option value="sim">Sim</option>
+        </select>
+
+        <label for="texto">Professor Representante:</label>
+        <input type="text" id="texto" disabled>
+
+              <label for="participants">Participantes:</label>
+              <input type="text" id="participants" name="participants" required>
+  
+              <label for="schedule">Horário de Apresentação:</label>
+              <select id="schedule" name="schedule" required>
+                  <option value="7h às 15h">7h às 15h</option>
+                  <option value="7h às 20h">7h às 20h</option>
+                  <option value="13h às 20h">13h às 20h</option>
+              </select>
+  
+              <button type="submit" class="button-cp" onclick="cadastro()" >Cadastrar Projeto</button>
+          </form>
+          <div id="output"></div>
+          </div>
+      </main>
+
+    <footer>
+      <a href="https://www.instagram.com/fieb_oficial/">
+      <img src="img/insta.png" alt="" class="insta">
+      </a>
+      <a href="https://fieb.edu.br/">
+        <img src="img/fieb.png" alt="" class="fieb">
+        </a>
+      <h3>ITB Brasílio Flores de Azevedo</h3>
+      <p>Avenida Grupo Bandeirantes, 138 - Jardim Belval</p>
+      <p>Barueri/SP - CEP 06420-150</p>
+      <p>2ª a 6ª - das 8h às 18h.</p>
+      <p>Telefone (11) 4199-4220 </p>
+      <p>contato@fieb.edu.br</p>
+      <div class="barra-inferior"></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      function atualizarInput() {
+            var selecao = document.getElementById('selecao');
+            var texto = document.getElementById('texto');
+            var resultado = document.getElementById('resultado');
+            
+            if (selecao.value === 'sim') {
+                texto.disabled = false;
+                resultado.textContent = 'Texto digitado: ' + texto.value;
+            } else {
+                texto.disabled = true;
+                resultado.textContent = 'Input bloqueado';
+            }
+        }
+
+        document.getElementById('texto').addEventListener('input', function() {
+            if (document.getElementById('selecao').value === 'sim') {
+                document.getElementById('resultado').textContent = 'Texto digitado: ' + this.value;
+            }
+        });
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>

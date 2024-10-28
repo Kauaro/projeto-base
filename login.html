@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Definição do conjunto de caracteres como UTF-8 -->
+    <meta charset="UTF-8" />
+    <!-- Definição da viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLA 2024 | LOGIN</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        html{
+            background-image: url("img/fundo3.png");
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contêiner principal -->
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header>
+          <nav class="navbar">
+            <a href="index.html"></a>
+            <img src="img/logo.png" alt="" id="logosla">
+          </a>
+          <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">Sobre nós</a></li>
+              <li><a href="projetos.html">Projetos</a></li>
+              <li><a href="https://fieb.edu.br/">FIEB</a></li>
+          </ul>
+          <a href="login.html">
+            <button class="login-icon" aria-label="Login" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+              </svg>
+            </button>
+          </a>
+        </nav>
+        </header>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="matricula">Matrícula</label>
+                <input type="text" id="matricula" name="matricula" required>
+            </div>
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="lembrar" name="lembrar">
+                <label for="lembrar">Lembrar senha</label>
+            </div>
+      
+              
+            <button type="submit" id="submit">
+              <a href="indexadm.html">
+              Entrar
+              </a>
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const matricula = document.getElementById('matricula').value;
+            const senha = document.getElementById('senha').value;
+            let isValid = true;
+
+            if (matricula.trim() === '') {
+                alert('Por favor, insira sua matrícula.');
+                isValid = false;
+            }
+
+            if (senha.trim() === '') {
+                alert('Por favor, insira sua senha.');
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Formulário válido! Enviando dados...');
+               
+            }
+        });
+    </script>
+</body>
+</html>
