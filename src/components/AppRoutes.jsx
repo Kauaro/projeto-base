@@ -3,10 +3,21 @@ import App from "../templates/App/App"
 import Home from "../templates/Home/Home"
 
 import ForgotPass from "../templates/Login/ForgotPass"
-import Login from "../templates/Login/Login"
+import LoginU from "../templates/Login/Login"
 
 import Mensagem from "../templates/Mensagem/Mensagem"
 import MensagemLer from "../templates/Mensagem/MensagemLer"
+
+import Index from "../paginas/index"
+import Sobre from "../paginas/sobre"
+import SobreProjetos from "../paginas/sobreprojetos"
+import Projetos from "../paginas/projetos"
+import CadastrarProjeto from "../paginas/CadastrarProjeto"
+import Projetosadm from "../paginas/projetosadm"
+import Sobreprojetosadm from "../paginas/sobreprojetosadm"
+import Login from "../paginas/Login"
+import Indexadm from "../paginas/indexadm"
+
 
 import Usuario from "../templates/Usuario/Usuario"
 import UsuarioEditar from "../templates/Usuario/UsuarioEditar"
@@ -30,6 +41,17 @@ const AppRoutes = () => {
         <Route path="/usuarioslista" element={<UsuariosLista />} />
         <Route path="/usuarionovo" element={<UsuarioNovo />} />
         <Route path="/usuarioeditar/:id" element={<UsuarioEditar />} />
+
+        <Route path="/index" element={<Index />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/sobreprojetos" element={<SobreProjetos />} />
+        <Route path="/projetos" element={<Projetos />} />
+        <Route path="/projetosadm" element={<Projetosadm />} />
+        <Route path="/Login" element={<LoginU />} />
+        <Route path="/indexadm" element={<Indexadm />} />
+        <Route path="/sobreprojetosadm" element={<Sobreprojetosadm />} />
+        <Route path="/cadastrarprojeto" element={<CadastrarProjeto />} />
+
 
       </Routes>
     </div>
