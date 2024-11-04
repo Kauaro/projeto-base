@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './css/login.css';
 import './css/style.css';
 import fundo from './img/fundo3.png';
 import logo from './img/logo.png';
+import logincad from './img/login-cadastro.png';
 
 const Login = () => {
     const [matricula, setMatricula] = useState('');
@@ -38,15 +40,13 @@ const Login = () => {
             <img src={logo} alt="Logo" id="logosla" />
           </Link>
           <ul className="nav-links">
-          <li><Link to="/" id="nav-sec">Início</Link></li>
+          <li><Link to="/index" id="nav-sec">Início</Link></li>
   <li><Link to="/sobre">Sobre nós</Link></li>
   <li><Link to="/projetos">Projetos</Link></li>
   <li><a href="https://fieb.edu.br/">FIEB</a></li>
           </ul>
-          <Link to="login.jsx">
-            <button className="login-icon" aria-label="Login">
-              {/* SVG code here */}
-            </button>
+          <Link to="/login">
+            <img src={logincad} alt="" id="logincad"/>
           </Link>
         </nav>
                 </header>
@@ -83,13 +83,17 @@ const Login = () => {
                                 checked={lembrar}
                                 onChange={(e) => setLembrar(e.target.checked)}
                             />
-                            <label htmlFor="lembrar">Lembrar senha</label>
+                            <label htmlFor="lembrar" id="lembrarimp">Lembrar  senha</label>
                         </div>
+                        <Link to="/indexadm">
                         <button type="submit" id="submit">
                             Entrar
                         </button>
+                        </Link>
                     </form>
                 </div>
+                
+
             </div>
         </div>
     );

@@ -1,36 +1,44 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './css/sobreprojetos.css';
-import './css/style.css';
+import './css/style.css'; // Import your stylesheet
+import logo from './img/logo.png';
+import logincad from './img/login-cadastro.png';
+import insta from './img/insta.png';
+import fieb from './img/fieb.png';
+import voltar from './img/voltar.jfif';
+import racismo from './img/racismo1.jpg';
+import mao from './img/mao preta2.jpg';
+import racismo1 from './img/racismosp.jfif';
+
 
 function SobreProjetos() {
   return (
     <div>
-      <nav className="navbar">
+      <nav className="navbarsp">
           <Link to="index.html">
             <img src={logo} alt="Logo" id="logosla" />
           </Link>
           <ul className="nav-links">
-          <li><Link to="/" id="nav-sec">Início</Link></li>
+          <li><Link to="/index" >Início</Link></li>
   <li><Link to="/sobre">Sobre nós</Link></li>
-  <li><Link to="/projetos">Projetos</Link></li>
+  <li><Link to="/projetos" id="nav-sec">Projetos</Link></li>
   <li><a href="https://fieb.edu.br/">FIEB</a></li>
           </ul>
-          <Link to="login.jsx">
-            <button className="login-icon" aria-label="Login">
-              {/* SVG code here */}
-            </button>
+          <Link to="/login">
+            <img src={logincad} alt="" id="logincad"/>
           </Link>
         </nav>
       <div className="container-sp">
         <h1>Raízes da Igualdade</h1>
-        <a href="projetos.html">
-          <img src="img/voltar.jfif" id="voltarimg" alt="" />
-        </a>
+        <Link to="/projetos">
+          <img src={voltar} id="voltarimg" alt="" />
+        </Link>
         <div className="carousel">
           <div className="carousel-inner">
-            <div className="carousel-item"><img src="img/racismosp.jfif" alt="RACISMO NAO" /></div>
-            <div className="carousel-item"><img src="img/mao preta2.jpg" alt="RACISMO NAO" /></div>
-            <div className="carousel-item"><img src="img/racismo1.jpg" alt="RACISMO NAO" /></div>
+            <div className="carousel-item"><img src={racismo} alt="RACISMO NAO" /></div>
+            <div className="carousel-item"><img src={mao} alt="RACISMO NAO" /></div>
+            <div className="carousel-item"><img src={racismo1} alt="RACISMO NAO" /></div>
           </div>
           <a href="#" className="carousel-control prev">&lt;</a>
           <a href="#" className="carousel-control next">&gt;</a>
@@ -61,10 +69,10 @@ function SobreProjetos() {
       </div>
       <footer>
         <a href="https://www.instagram.com/fieb_oficial/">
-          <img src="img/insta.png" alt="" className="insta" />
+          <img src={insta} alt="" className="insta" />
         </a>
         <a href="https://fieb.edu.br/">
-          <img src="img/fieb.png" alt="" className="fieb" />
+          <img src={fieb} alt="" className="fieb" />
         </a>
         <h3>ITB Brasílio Flores de Azevedo</h3>
         <p>Avenida Grupo Bandeirantes, 138 - Jardim Belval</p>

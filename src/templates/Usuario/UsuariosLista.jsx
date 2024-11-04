@@ -1,35 +1,43 @@
-import { useNavigate } from "react-router-dom"
-import Header from "../../components/Header/Header"
-import Sidebar from '../../components/Menu/Sidebar'
-import logo from '../../assets/images/home.png'
-import UsuarioService from "../../services/UsuarioService"
-import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import Sidebar from '../../components/Menu/Sidebar';
+import logo from '../../assets/images/home.png';
+import UsuarioService from "../../services/UsuarioService";
+import { useEffect, useState } from "react";
+
 
 const UsuariosLista = () => {
-
     const navigate = useNavigate();
-
-    const goTo = () => {
-        navigate('/usuarioeditar')
-    }
-
     const [usuarios, setUsuarios] = useState([]);
 
     useEffect(() => {
-        UsuarioService.getAllUsuarios().then(
-            (response) => {
-                const usuarios = response.data;
-                setUsuarios(usuarios);
-                console.log(usuarios);
-            }
-        ).catch((error) => {
-            console.log(error);
-        })
+        loadUsuarios();
     }, []);
 
+    const loadUsuarios = async () => {
+        try {
+            const response = await UsuarioService.getAllUsuarios();
+            setUsuarios(response.data);
+        } catch (error) {
+            console.error("Erro ao buscar usuários:", error);
+        }
+    };
+
     const getId = (id) => {
-        navigate(`/usuarioeditar/` + id)
-    }
+        navigate(`/usuarioeditar/${id}`); // Navegar para a página de edição
+    };
+
+    const handleDelete = async (id) => {
+        if (window.confirm("Tem certeza que deseja excluir este usuário?")) {
+            try {
+                await UsuarioService.deleteUsuario(id);
+                setUsuarios(usuarios.filter(usuario => usuario.id !== id)); // Atualizar o estado local
+                alert("Usuário excluído com sucesso!");
+            } catch (error) {
+                console.error("Erro ao excluir usuário:", error);
+            }
+        }
+    };
 
     return (
         <div className="d-flex">
@@ -48,25 +56,29 @@ const UsuariosLista = () => {
                                     <th scope="col">ID</th>
                                     <th scope="col">Nome</th>
                                     <th scope="col">Email</th>
+                                    <th scope="col">Matricula</th>
+                                    <th scope="col">Senha</th>
                                     <th scope="col">Acesso</th>
-                                    <th scope="col">Cadastro</th>
                                     <th scope="col">Status</th>
-                                    <th scope="col">Abrir</th>
+                                    <th scope="col">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {usuarios?.map((usuario) => (
-                                    <tr className="" key={usuario.id}>
+                                {usuarios.map((usuario) => (
+                                    <tr key={usuario.id}>
                                         <td>{usuario.id}</td>
                                         <td>{usuario.nome}</td>
                                         <td>{usuario.email}</td>
+                                        <td>{usuario.matricula}</td>
+                                        <td>{usuario.senha}</td>
                                         <td>{usuario.nivelAcesso}</td>
-                                        <td>{usuario.dataCadastro}</td>
                                         <td>{usuario.statusUsuario}</td>
                                         <td>
-                                            <button onClick={() => getId(usuario.id)}
-                                                className="btn btn-sm btn-warning rounded">
-                                                <i className="bi bi-envelope-open"> Abrir</i>
+                                            <button onClick={() => getId(usuario.id)} className="btn btn-sm btn-warning rounded ">
+                                                Editar
+                                            </button>
+                                            <button onClick={() => handleDelete(usuario.id)} className="btn btn-sm btn-danger rounded ms-2">
+                                                Excluir
                                             </button>
                                         </td>
                                     </tr>
@@ -77,7 +89,7 @@ const UsuariosLista = () => {
                 </section>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default UsuariosLista
+export default UsuariosLista;

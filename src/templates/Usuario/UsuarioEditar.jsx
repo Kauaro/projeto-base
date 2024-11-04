@@ -1,29 +1,51 @@
-import { Link, useParams } from "react-router-dom"
-import Header from "../../components/Header/Header"
-import Sidebar from '../../components/Menu/Sidebar'
-import logo from '../../assets/images/home.png'
-import { useEffect, useRef, useState } from "react"
-import UsuarioService from "../../services/UsuarioService"
+import { Link, useParams, useNavigate } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import Sidebar from '../../components/Menu/Sidebar';
+import logo from '../../assets/images/home.png';
+import { useEffect, useState } from "react";
+import UsuarioService from "../../services/UsuarioService";
 
 const UsuarioEditar = () => {
-
     const { id } = useParams();
-    const _dbRecords = useRef(true);
-
-    const [usuario, setUsuario] = useState([]);
+    const navigate = useNavigate();
+    const [usuario, setUsuario] = useState({
+        id: '',
+        nome: '',
+        email: '',
+        matricula: '',
+        senha: '',
+        nivelAcesso: '',
+        statusUsuario: ''
+    });
 
     useEffect(() => {
-        UsuarioService.getById(id).then(
-            (response) => {
-                const usuario = response.data;
-                setUsuario(usuario);
-                console.log(usuario);
+        const loadUsuario = async () => {
+            try {
+                const response = await UsuarioService.getById(id);
+                setUsuario(response.data);
+            } catch (error) {
+                console.error("Erro ao buscar usuário:", error);
             }
-        ).catch((error) => {
-            console.log(error);
-        })
-    }, []);
+        };
+        loadUsuario();
+    }, [id]);
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUsuario(prevState => ({ ...prevState, [name]: value }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await UsuarioService.editUsuario(usuario.id, usuario);
+            alert("Usuário atualizado com sucesso!");
+            navigate('/usuario'); // Redireciona de volta para a lista
+        } catch (error) {
+            alert("Erro ao atualizar usuário: " + error.message);
+            console.error("Erro ao atualizar usuário:", error);
+        }
+    };
 
     return (
         <div className="d-flex">
@@ -35,7 +57,7 @@ const UsuarioEditar = () => {
                     logo={logo}
                 />
                 <section className="m-2 p-2 shadow-lg">
-                    <form className="row g-3">
+                    <form className="row g-3" onSubmit={handleSubmit}>
                         <div className="col-md-2">
                             <label htmlFor="inputID" className="form-label">ID</label>
                             <input type="text" className="form-control" id="inputID" readOnly 
@@ -43,31 +65,38 @@ const UsuarioEditar = () => {
                         </div>
                         <div className="col-md-5">
                             <label htmlFor="inputNome" className="form-label">Nome</label>
-                            <input type="text" className="form-control" id="inputNome"  
-                                value={usuario.nome} />
+                            <input type="text" className="form-control" id="inputNome" 
+                                name="nome" value={usuario.nome} onChange={handleChange} required />
                         </div>
                         <div className="col-md-5">
                             <label htmlFor="inputEmail4" className="form-label">Email</label>
-                            <input type="email" className="form-control" id="inputEmail4"  
-                                value={usuario.email} />
+                            <input type="email" className="form-control" id="inputEmail4" 
+                                name="email" value={usuario.email} onChange={handleChange} required />
                         </div>
-
-                        <div className="col-md-4">
-                            <label htmlFor="inputData" className="form-label">Data de Cadastro</label>
-                            <input type="text" className="form-control" id="inputData" readOnly  
-                                value={usuario.dataCadastro} />
+                        <div className="col-md-5">
+                            <label htmlFor="inputMatricula" className="form-label">Matricula</label>
+                            <input type="text" className="form-control" id="inputMatricula" 
+                                name="matricula" value={usuario.matricula} onChange={handleChange} required />
                         </div>
                         <div className="col-md-4">
-                            <label htmlFor="inputStatus" className="form-label">Status</label>
-                            <input type="text" className="form-control" id="inputStatus" readOnly  
-                                value={usuario.statusUsuario} />
+                            <label htmlFor="inputSenha" className="form-label">Senha</label>
+                            <input type="text" className="form-control" id="inputSenha" 
+                                name="senha" value={usuario.senha} onChange={handleChange} required />
                         </div>
                         <div className="col-md-4">
                             <label htmlFor="inputAcesso" className="form-label">Acesso</label>
-                            <select id="inputAcesso" className="form-select">
-                                <option selected>Nível de Acesso</option>
-                                <option>...</option>
+                            <select id="inputAcesso" className="form-select" 
+                                name="nivelAcesso" value={usuario.nivelAcesso} onChange={handleChange} required>
+                                <option value="">Nível de Acesso</option>
+                                <option value="Administrador">Administrador</option>
+                                <option value="Professor Representante">Professor Representante</option>
+                                <option value="Aluno Representante">Aluno Representante</option>
                             </select>
+                        </div>
+                        <div className="col-md-4">
+                            <label htmlFor="inputStatus" className="form-label">Status</label>
+                            <input type="text" className="form-control" id="inputStatus" readOnly 
+                                value={usuario.statusUsuario} />
                         </div>
                         
                         <div className="col-12 d-flex justify-content-between">
@@ -85,7 +114,7 @@ const UsuarioEditar = () => {
                 </section>
             </div>
         </div>
-    )
+    );
 }
 
-export default UsuarioEditar
+export default UsuarioEditar;

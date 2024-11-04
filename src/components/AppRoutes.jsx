@@ -16,13 +16,15 @@ import CadastrarProjeto from "../paginas/CadastrarProjeto"
 import Projetosadm from "../paginas/projetosadm"
 import Sobreprojetosadm from "../paginas/sobreprojetosadm"
 import Login from "../paginas/Login"
-import Indexadm from "../paginas/indexadm"
+import Administrador from "../paginas/administrador"
+import IndexAdm from "../paginas/indexadm"
 
 
 import Usuario from "../templates/Usuario/Usuario"
 import UsuarioEditar from "../templates/Usuario/UsuarioEditar"
 import UsuarioNovo from "../templates/Usuario/UsuarioNovo"
 import UsuariosLista from "../templates/Usuario/UsuariosLista"
+
 
 const AppRoutes = () => {
   return (
@@ -47,8 +49,9 @@ const AppRoutes = () => {
         <Route path="/sobreprojetos" element={<SobreProjetos />} />
         <Route path="/projetos" element={<Projetos />} />
         <Route path="/projetosadm" element={<Projetosadm />} />
-        <Route path="/Login" element={<LoginU />} />
-        <Route path="/indexadm" element={<Indexadm />} />
+        <Route path="/login" element={<LoginU />} />
+        <Route path="/administrador" element={<Administrador />} />
+        <Route path="/indexadm" element={<IndexAdm />} />
         <Route path="/sobreprojetosadm" element={<Sobreprojetosadm />} />
         <Route path="/cadastrarprojeto" element={<CadastrarProjeto />} />
 

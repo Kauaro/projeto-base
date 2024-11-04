@@ -1,0 +1,114 @@
+
+
+
+
+/* Container principal */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+    padding: 1rem;
+  }
+  
+  /* Card de login */
+  .login-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 28rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título */
+  .login-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Formulário */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  /* Input */
+  .input-wrapper {
+    position: relative;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  .input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  }
+  
+  .input-error {
+    border-color: #ef4444;
+  }
+  
+  /* Mensagem de erro */
+  .error-message {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #ef4444;
+  }
+  
+  /* Botão de submit */
+  .submit-button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    color: white;
+    background-color: #2563eb;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+  }
+  
+  .submit-button:disabled {
+    cursor: not-allowed;
+  }
+  
+  .button-loading {
+    background-color: #60a5fa;
+  }
+  
+  /* Texto de suporte */
+  .support-text {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+  
+  /* Media Query para responsividade */
+  @media (max-width: 640px) {
+    .login-card {
+      padding: 1.5rem;
+    }
+  }

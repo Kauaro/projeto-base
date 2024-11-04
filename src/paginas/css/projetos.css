@@ -11,9 +11,16 @@
     max-width: 5000px;
     margin: 0 auto;
   }
+
+  .h1P{
+    text-align: center;
+    color: #351357;
+    font-size: 50px;
+    margin: 60px;
+  }
   h1 {
     text-align: center;
-    color: #481778;
+    color: #5801af;
     font-size: 50px;
     margin: 60px;
   }

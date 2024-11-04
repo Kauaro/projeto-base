@@ -1,0 +1,77 @@
+/* UsuarioNovo.css */
+
+.d-flex {
+    display: flex;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.m-2 {
+    margin: 0.5rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.col-md-5 {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+.col-md-2 {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.col-12 {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.form-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}

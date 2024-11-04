@@ -24,6 +24,7 @@ const Usuario = () => {
                             className="btn btn-lg btn-warning">
                             Lista de Usuários
                         </Link>
+                        
                     </div>
                 </section>
            </div>

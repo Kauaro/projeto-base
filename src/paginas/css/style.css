@@ -1,3 +1,5 @@
+
+
 /* define variaveis com cores padroes do site  */
 :root {
   --main-color: #D9BCF6;
@@ -48,10 +50,14 @@ html {
 
 .navbar {
   display: flex;
+  width: 1210px;
+  position: relative;
+  right: 65px;
   justify-content: space-between;
   align-items: center;
   background-color: #D9BCF6;
   padding: 1rem 2rem;
+  height: 70px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -61,7 +67,7 @@ html {
   font-size: 3em;
   list-style-type: none;
   position: relative;
-  right: 200px;
+  left: 1px;
 }
 .nav-links li {
   margin-left: 5rem;
@@ -110,7 +116,11 @@ html {
 #logosla {
   width: 100px;
   position: relative;
-  right: 300px;
+
+}
+
+#logincad {
+  width: 50px;
 }
 
 /* nav do header  */
@@ -145,6 +155,10 @@ a:visited {
   height: inherit;
   border: none;
   background-color: var(--second-color);
+}
+
+#retornar {
+  width: 20px;
 }
 
 .on-page-menu-color {
@@ -399,4 +413,29 @@ footer p, h3 {
   .span-hb {
     font-size: 0.7rem;
   }
+}
+
+.mySlides {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.mySlides.active {
+  display: block;
+  opacity: 1;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
 }
